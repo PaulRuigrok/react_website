@@ -10,7 +10,7 @@ const Wallet = () => {
     return (
     <>
     <div id='wallet'></div>
-    <div className= 'md:w-10/12 flex md:flew-col flex-row justify-center items-center mt-20 p-8 justify-between'>
+    <div className= 'md:w-10/12 flex md:flew-col flex-row justify-center items-center mt-20 p-4 md:p-8 justify-between'>
         <div className = 'flex flex-col md:flex-row items-center'>    
             <div className='md:w-1/2 overflow-hidden'>
                 <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Wallets:</h1>
@@ -34,29 +34,29 @@ const Wallet = () => {
                 <ArrowDown className='w-10 mb-20 md:w-20 ml-60 animate-smallbounce'/>
                 </div>
             <div className='md:w-1/2 flex flex-col justify-center items-center'>
-                <div className='md:w-4/5 flex flex-col justify-center md:py-20 rounded-md border border-gray-200 shadow-md bg-gray-100'>
+                <div className='md:w-4/5 flex flex-col justify-center md:py-20'>
                     <div className='flex justify-center'>
                         <div className='z-30 text-center'><WalletSvg className='w-20 md:w-60'/></div>
                     </div>
                     <div className='flex justify-center w-full'>
-                        <p className='text-xl md:text-2xl font-mono font-bold md:p-6 md:w-1/2'>Important note: When you create a wallet/address on a blockchain there will by created a key (called a 'private key') with it. You need the key for every outgoing transaction from your wallet.</p>
+                        <p className='text-xl md:text-2xl font-mono font-bold p-2 md:p-6 md:w-1/2'>Important note: When you create a wallet/address on a blockchain there will by created a key (called a 'private key') with it. You need the key for every outgoing transaction from your wallet.</p>
                     </div>
                 </div>
             </div>
         </div>   
     </div>
 
-    <div className= 'w-10/12 flex flex-col md:flex-row justify-center md:items-start p-8 bg-gray-100 rounded-md md:mt-80'>
+    <div className= 'w-11/12 md:w-10/12 flex flex-col md:flex-row justify-center md:items-start p-4 md:p-8 bg-gray-100 rounded-md md:mt-80'>
         <div className ='md:sticky top-40'>
             <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Wallets Managers:</h1>    
         </div>
         <div>
-            <p className= 'font-mono text-xl md:text-2xl text-gray-800 m-8'>
+            <p className= 'font-mono text-xl md:text-2xl text-gray-800 md:m-8'>
                 The word 'wallet' (or 'hardware-wallet') is being thrown around a lot. I find the word a bit miss-used most of the time.<br></br><br></br>
                 Maybe you've heard of MetaMask or TrustWallet as being a wallet. Basicly these programs/apps will let you 'talk' to the blockchain it is connected to (e.g. the Bitcoin-, Ethereum- or Icon blockchain). The Wallet Manager translates your requests (e.g. "send 1 ICX from my address/wallet to another address/wallet") for you, so you don't have to be a programmer to use the blockchain.<br></br><br></br>
                 Remember that when you create a address/wallet on a blockchain you also create a 'private key'? A private key is a long random number and is needed to "sign" (proof you are the owner of the address/wallet you are trying to send money from) a transaction. More on that below. <br></br><br></br>For now it's important to understand that when you want to send funds from a wallet, you need the private key.<br></br><br></br>
                 An example of a private-key:<br></br><br></br>
-                <span className='md:hidden block font-mono font-thin text-xl italic'>'E9873D79C6D87DC0FB6A5778633389F4<br></br>453213303DA61F20BD67FC233AA33262'</span>
+                <span className='md:hidden block font-mono font-thin text-xl italic'>'E9873D79C6D87DC0<br></br>FB6A5778633389F4<br></br>453213303DA61F20<br></br>BD67FC233AA33262'</span>
                 <span className='hidden md:block font-mono font-thin text-xl italic'>'E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262'</span>
                 <br></br><br></br>
                 You can imagine it's not very practical typing in this string every time you want to do a transaction. And you want to keep this string a secret because anyone with this string can make a transaction from the address/wallet it's paired to. So it wouldn't be smart to keeping it on your computer or phone...
@@ -84,8 +84,8 @@ const Wallet = () => {
                 
                 <br></br>
                 The safest way to store your private key is on a 'Hardware Wallet (Manager )' or 'Cold Wallet (Manager)'. You can think of them as a USB-device with a Wallet Manager app on it. One of the best known is the 'Ledger Nano S'.<br></br><br></br>
-                <div className= 'shadow-xl bg-gray-300 my-8 rounded-md'>
-                <p className='text-xl md:text-2xl font-mono text-red-600 p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few options on how to recover your private key in case you forget your password, your computer dies or whatever bad things can happen in life. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.<br></br><br></br><br></br>
+                <div className= 'shadow-xl md:my-8 rounded-md'>
+                <p className='text-xl md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few options on how to recover your private key in case you forget your password, your computer dies or whatever bad things can happen in life. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.<br></br><br></br><br></br>
                 <span className ='font-mono font-thin text-gray-800 underline'>
                 Most Wallet Managers give you three options:<br></br><br></br></span>
                 <span className ='font-mono font-thin text-gray-800'>
