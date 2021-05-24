@@ -6,7 +6,7 @@ import { ReactComponent as FileSvg } from '../../media/file_with_lines.svg'
 const Network = () => {
     return (
     <>  <div id="network"></div>
-        <div className= 'w-10/12 h-full bg-yellow-300 flex  items-center mt-80 p-4 md:p-8 justify-between rounded-md'>
+        <div className= 'w-11/12 md:w-10/12 h-full bg-yellow-300 flex items-center mt-80 p-4 md:p-8 justify-between rounded'>
         <div className = 'flex flex-col md:flex-row items-center '>    
             <div className='md:w-1/2'>
             <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>A blockchain:</h1>
@@ -14,9 +14,9 @@ const Network = () => {
             just think of a network. Just like the internet or your wifi at home.<br></br><br></br>
             You can think of a crypto-currency as a network of computers all around the world connected to each other and having only one file. One shared ledger, like 
             an Excel sheet.<br></br><br></br>On this ledger there are balances kept of every address.<br></br><br></br>For example:<br></br>
-            Address 1 has 50 coins,<br></br>
-            Address 2 100 coins,<br></br>
-            Address 3 has 80 coins.<br></br><br></br>
+            <span className='text-gray-800 font-mono leading-10'>Address 1 has 50 coins,<br></br>
+            Address 2 has 100 coins,<br></br>
+            Address 3 has 80 coins.<br></br><br></br></span>
             <span className='md:block hidden font-mono font-bold'>That's it! Just a bunch of computers all having a copy of the same Excel sheet. </span>
             </p>
             </div>

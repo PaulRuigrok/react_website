@@ -23,7 +23,7 @@ const Transaction = () => {
                 </div>
                 <div>
                     <div className='flex flex-col jusitfy-start sticky bottom-10 md:top-40'>
-                        <p className='text-center font-mono text-3xl pb-8 sticky text-gray-800'>the blockchain:</p>
+                        <p className='text-center font-mono md:text-3xl pb-8 sticky text-gray-800'>the blockchain:</p>
                         <div className='grid grid-cols-3 gap-0 md:gap-4'>
                             <div className='flex justify-center animate-wiggle' style={{animationDelay:"400ms"}}><PcSvg className='w-10 md:w-40'/></div>
                             <div className='flex justify-center animate-wiggle'><PcSvg className='w-10 md:w-40'/></div>

@@ -16,17 +16,17 @@ const Recap = () => {
                 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>
                     <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Blockhain</h1>
-                    <p className= 'font-mono text-2xl text-gray-800'>A blockchain is just a network all sharing a copy of the same file. Which contains addresses with their balances.</p>
+                    <p className= 'font-mono text-gray-800'>A blockchain is just a network all sharing a copy of the same file. Which contains addresses with their balances.</p>
                 </div>
 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>                    
                 <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Wallet</h1>
-                    <p className= 'font-mono text-2xl text-gray-800'>The term 'wallet' is used in a different ways, but technicaly a wallet is a different word for an address on a blockchain.</p>
+                    <p className= 'font-mono text-gray-800'>The term 'wallet' is used in a different ways, but technicaly a wallet is a different word for an address on a blockchain.</p>
                 </div>
                 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>
                     <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Wallet Managers</h1>
-                    <p className= 'font-mono text-2xl text-gray-800'>An app, or hardware device, that allows you to create wallets and send funds from your wallets without the need of making technical steps.</p>
+                    <p className= 'font-mono text-gray-800'>An app, or hardware device, that allows you to create wallets and send funds from your wallets without the need of making technical steps.</p>
                 </div>
 
             </div>
