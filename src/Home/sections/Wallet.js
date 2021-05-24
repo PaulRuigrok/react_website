@@ -4,6 +4,7 @@ import walletCreate from '../../media/create_wallet.png'
 import iconexWallet from '../../media/iconex_browser.png'
 import metamaskWallet from '../../media/metamask_browser.png'
 import {ReactComponent as ArrowDown} from '../../media/arrow_down.svg'
+import CheckButton from '../../Components/CheckButton'
 
 
 const Wallet = () => {
@@ -50,9 +51,9 @@ const Wallet = () => {
         <div className ='md:sticky top-40'>
             <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Wallets Managers:</h1>    
         </div>
-        <div>
+        <div className=''>
             <p className= 'font-mono text-xl md:text-2xl text-gray-800 md:m-8'>
-                The word 'wallet' (or 'hardware-wallet') is being thrown around a lot. I find the word a bit miss-used most of the time.<br></br><br></br>
+                The word 'wallet' is being thrown around a lot. I find the word a bit miss-used sometimes.<br></br><br></br>
                 Maybe you've heard of MetaMask or TrustWallet as being a wallet. Basicly these programs/apps will let you 'talk' to the blockchain it is connected to (e.g. the Bitcoin-, Ethereum- or Icon blockchain). The Wallet Manager translates your requests (e.g. "send 1 ICX from my address/wallet to another address/wallet") for you, so you don't have to be a programmer to use the blockchain.<br></br><br></br>
                 Remember that when you create a address/wallet on a blockchain you also create a 'private key'? A private key is a long random number and is needed to "sign" (proof you are the owner of the address/wallet you are trying to send money from) a transaction. More on that below. <br></br><br></br>For now it's important to understand that when you want to send funds from a wallet, you need the private key.<br></br><br></br>
                 An example of a private-key:<br></br><br></br>
@@ -63,10 +64,10 @@ const Wallet = () => {
                 <br></br><br></br>
                 Income the Wallet Managers. They store the long string that is your private key safely and encrypted for you. When you are logged in on your Wallet Manager and you want to make a transaction you don't need to pass in your long private key.
                 <br></br><br></br>
-                <div className='flex flex-col md:flex-row justify-around items-center my-8 '>
+                <div className='flex flex-col md:flex-row justify-around items-center my-8 md:mb-4 '>
                     <div className='md:w-2/6'>
                         <img src={metamaskWallet} alt='Iconex_wallet' className='rounded-md shadow-2xl w-full'/>
-                        <p className= 'font-mono text-xl md:text-2xl text-gray-800 md:mt-8 mb-20 p-4 italic'> This is MetaMask.
+                        <p className= 'font-mono text-gray-400 font-thin md:mt-8 mb-20 p-4 italic'> This is MetaMask.
                         A wallet-manager that can connect (send messages/transactions) with multiple blockchains.
                         In the image you can see it has the Ethereum Mainnet selected and that this wallet/address has
                         some Ether.
@@ -74,7 +75,7 @@ const Wallet = () => {
                     </div>
                     <div className='md:w-2/6'>
                         <img src={iconexWallet} alt='Iconex_wallet' className='rounded-md shadow-2xl w-full'/>
-                        <p className= 'font-mono text-xl md:text-2xl text-gray-800 md:mt-8 p-4 italic'>This is the Iconex app.
+                        <p className= 'font-mono text-gray-400 font-thin md:mt-8 p-4 italic '>This is the Iconex app.
                         It's the Google Chrome-extension (a browser-app) which let you connect to the Icon Blockchain.
                         You can see the address/wallet the Iconex wallet-manager is managing has some ICX in it.
                         </p>
@@ -84,8 +85,10 @@ const Wallet = () => {
                 
                 <br></br>
                 The safest way to store your private key is on a 'Hardware Wallet (Manager)' or 'Cold Wallet (Manager)'. You can think of them as a USB-device with a Wallet Manager app on it. One of the best known is the 'Ledger Nano S'.<br></br><br></br>
-                <div className= 'shadow-xl md:my-8 my-4 rounded p-4 border border-white'>
-                    <p className='text-xl md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few options on how to recover your private key in case you forget your password, your computer dies or whatever bad things can happen in life. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.</p>
+                <div className=' md:flex md:justify-center'>
+                    <div className= 'shadow-xl md:my-8 my-4 rounded p-4 border border-white md:w-1/2 md:block'>
+                        <p className='text-xl md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few options on how to recover your private key in case you forget your password, your computer dies or whatever bad things can happen in life. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.</p>
+                    </div>
                 </div>
                 <div className='mt-12'>
                     <span className ='font-mono font-thin text-gray-800 underline'>
@@ -102,9 +105,11 @@ const Wallet = () => {
                 </div>
                 
             </p>
-        </div>
+        </div>   
     </div>
-    
+    <div className='h-40 w-5/12 border text-left'>
+        <CheckButton />
+    </div>
     </>
 
     )

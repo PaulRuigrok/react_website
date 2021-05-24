@@ -15,7 +15,7 @@ const CheckButton = () => {
                 <div className='relative w-full' >
                     <div className='overflow-hidden'>
                         <div className= {`rounded-3xl px-6 py-4 m-6 border border-gray-200 
-                            hover:bg-blue-200 duration-300 cursor-pointer`}>
+                            md:hover:bg-blue-200 duration-300 cursor-pointer`}>
                             <h1 className='text-center font-mono md:text-2xl w-full'>got it?</h1>
                         </div>
                     </div>

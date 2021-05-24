@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+## About this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I build this website to help introduce cryptocurrencies to new people. I expect this to become an evolving project and hopefully people will learn something from it.
+
+The project is build using React and Tailwind css. If you have any question please let me know!
 
 ## Available Scripts
 
