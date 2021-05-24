@@ -5,14 +5,14 @@ const Recap = () => {
     return (
     <>
         <div className= 'w-10/12 flex flex-col justify-center items-center mt-80'>
-            <div  className = 'flex flex-col w-5/12'>    
-                <h1 className= 'p10 text-8xl font-display text-gray-800 font-bold text-left'>Recap:</h1>
+            <div  className = 'flex flex-col md:flex-col md:w-5/12'>    
+                <h1 className= 'text-8xl font-display text-gray-800 font-bold text-left'>Recap:</h1>
                 <p className= 'font-mono text-3xl text-gray-800 m-8 p-10'>
                     Okay, We've handled a lot so far. Don't forget to take it step by step.<br></br><br></br>
                     Before we continue, let's recall what you've learned so far.      
                     </p>
             </div>
-            <div className='w-9/12 flex flex-row justify-around'>
+            <div className='w-9/12 flex flex-col md:flex-row justify-around'>
                 
                 <div className='bg-white border shadow-lg p-8 m-4 rounded-md'>
                     <h1 className='text-4xl font-display font-bold mb-4'>Blockhain</h1>
