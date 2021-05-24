@@ -3,8 +3,7 @@ import {Link} from 'react-scroll'
 
 const SideNav = () => {
     return (
-        <div className='flex flex-col justify-between h-1/2 w-20 fixed inset-y-80 left-0 p-4 motion-safe:animate-fadeIn z-40'>
-            
+        <div className='hidden md:flex flex-col justify-between h-1/2 w-20 fixed inset-y-80 left-0 p-4 motion-safe:animate-fadeIn z-40'>
             <Link to='home' activeClass="bg-red-500" spy={true} smooth={true} className="cursor-pointer">
                 <p className='font-mono tracking-widest'>Top</p>
             </Link>
