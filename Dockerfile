@@ -8,16 +8,18 @@ COPY . .
 RUN npm run build 
 
 # stage 1 - Serve Front End Assest
-#FROM fholzer/nginx-brotli:v1.12.2
-FROM fholzer/nginx-brotli:v1.19.1
+FROM fholzer/nginx-brotli:v1.12.2
+#fholzer/nginx-brotli:latest
+
 
 WORKDIR /etc/nginx
-ADD nginx.conf /etc/nginx/nginx
+ADD nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/build /usr/share/nginx/html 
+
 EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
 
 # docker build -t paulruigrok/react_website:latest .
-## the dot in the end specifiets to find to dockerfile in the current directory
+## the dot in the end specifies to find to dockerfile in the current directory
 
 # docker run -p 8080:443 paulruigrok/react_website:latest
