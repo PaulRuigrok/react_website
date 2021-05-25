@@ -14,9 +14,9 @@ const Network = () => {
             just think of a network. Just like the internet or your wifi at home.<br></br><br></br>
             You can think of a crypto-currency as a network of computers all around the world connected to each other and having only one file. One shared ledger, like 
             an Excel sheet.<br></br><br></br>On this ledger there are balances kept of every address.<br></br><br></br>For example:<br></br><br></br>
-            <span className='text-gray-800 font-mono underline leading-8'>Address 1 has 50 coins,<br></br>
-            Address 2 has 100 coins,<br></br>
-            Address 3 has 80 coins.<br></br><br></br></span>
+            <span className='text-gray-800 font-mono underline leading-8'>Address 1 has 50 coins<br></br>
+            Address 2 has 100 coins<br></br>
+            Address 3 has 80 coins<br></br><br></br></span>
             <span className='md:block hidden font-mono font-bold'>That's it! Just a bunch of computers all having a copy of the same Excel sheet. </span>
             </p>
             </div>

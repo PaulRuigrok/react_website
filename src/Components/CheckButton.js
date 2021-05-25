@@ -17,7 +17,7 @@ const CheckButton = (props) => {
                             <h1 className='text-center font-mono md:text-2xl w-full'>got it?</h1>
                         </div>
                     </div>
-                    <QuestionSvg className='w-6 md:w-10 h-10 absolute -top-0 -right-0 md:-right-10 z-10' />   
+                    <QuestionSvg className='w-6 md:w-10 h-10 absolute -top-0 -right-10 md:-right-20' />   
                 </div>
                 :
                 <div className='relative w-full' >
@@ -27,7 +27,7 @@ const CheckButton = (props) => {
                             <h1 className='text-center font-mono md:text-2xl w-full'>{props.message}</h1>
                         </div>
                     </div>
-                    <ArrowDown className='w-6 md:w-10 h-10 absolute top-10 -right-0 md:-right-10  animate-smallbounce'/>
+                    <ArrowDown className='w-6 md:w-10 h-10 absolute top-10 -right-10 md:-right-20 animate-smallbounce'/>
                 </div>
             }
         </div>

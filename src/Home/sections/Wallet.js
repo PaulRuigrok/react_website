@@ -13,7 +13,7 @@ const Wallet = () => {
         <div id='wallet'></div>
         <div className= 'md:w-10/12 grid mt-20 p-4 md:p-8'>
             <div className = 'flex flex-col md:flex-row items-center'>    
-                <div className='md:w-1/2'>
+                <div className='md:w-1/2 grid gap-8'>
                     <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Wallets:</h1>
                     <p className= 'font-mono md:text-2xl text-gray-800 md:m-8'>
                     Okay, so we got an Excel sheet that contains addresses and balances.<br></br><br></br>
@@ -25,11 +25,11 @@ const Wallet = () => {
                     2. a public key (a big string of numbers & characters)<br></br>
                     3. a private key (also a big string of numbers & characters)<br></br><br></br>
                     The 2 keys form a pair. Think of it like they share DNA. How this works exactly is beyond the scope of this website. If you want to know more about it google 'sha encryption'.
-                    <br></br><br></br>
+                    <br></br><br></br><br></br>
                     Okay! So:<br></br><br></br>
                     <span className='bg-blue-100 p-2 italic leading-7'>! -> a wallet = a balance and a [ public key * private key ] -pair</span>
                     </p>
-                    <div className='md:flex justify-center md:w-1/2'>
+                    <div className='my-20 justify-center w-8/12 md:w-1/2'>
                         <CheckButton message="cool, let's continue"/>
                     </div>               
                 </div>
@@ -91,8 +91,8 @@ const Wallet = () => {
             
             
             
-            <div className='md:w-1/4 md:justify-self-end mt-8'>
-                <CheckButton message="cool, scroll on than!"/>
+            <div className='md:w-1/4 w-8/12 md:justify-self-end mt-8'>
+                <CheckButton message="you beast, scroll on than!"/>
             </div>
         </div>
                     
