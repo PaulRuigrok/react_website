@@ -16,7 +16,7 @@ const Introduction = () => {
                     We'll be using the 'got it?' button to help you taking it step by step and taking a breather after every step.<br></br><br></br>
                     Paul
                     </p>
-                    <CheckButton/>
+                    <CheckButton message="awesome! scroll down to continue!"/>
                 </div>
             </div>
         </>
