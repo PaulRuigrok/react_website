@@ -42,19 +42,19 @@ const Transaction = () => {
                 </div>
 
                 {/* right part of the container holding the network svg scheme */}
-                <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-8 bottom-1 z-30'>
+                <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4git  bottom-0 z-30 md:z-10'>
                     <div className='flex flex-col sticky md:top-40 '>
-                        <p className='text-center font-mono md:text-3xl pb-8 text-gray-800'>the blockchain:</p>
-                        <div className='grid grid-cols-3 gap-0 md:gap-20'>
-                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"400ms"}}><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"200ms"}}><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center'><FileSvg className='w-20 h-40 md:w-60 md:h-60'/></div>
-                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"300ms"}}><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40'/></div>
-                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"100ms"}}><PcSvg className='w-20 md:w-40'/></div>     
+                        <p className='text-center font-mono md:text-3xl pb-2 md:pb-8 text-gray-800'>the blockchain:</p>
+                        <div className='grid grid-cols-3 gap-4 md:gap-20'>
+                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"400ms"}}><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"200ms"}}><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center'><FileSvg className='w-20 h-20 md:w-60 md:h-60'/></div>
+                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"300ms"}}><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle'><PcSvg className='w-10 md:w-40'/></div>
+                            <div className='flex justify-center animate-wiggle' style={{animationDelay:"100ms"}}><PcSvg className='w-10 md:w-40'/></div>     
                         </div>
                     </div>
                 </div>
