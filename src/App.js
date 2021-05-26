@@ -12,7 +12,7 @@ function App() {
   // TOGGLE MENU
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
-    console.log('toggled!')
+
     setIsOpen(!isOpen)
   }
   // HIDE MENU WHEN SCREEN IS RESIZED
@@ -31,7 +31,6 @@ function App() {
 
   return (
     <>
-      {console.log(isOpen)}
       <Navbar toggle={toggle}/>
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
