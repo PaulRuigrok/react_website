@@ -15,7 +15,7 @@ const Navbar = ({toggle}) => {
                     <LogoSvg className='w-10 md:w-14 animate-spin'/>
                     <h2 className= 'text-2xl hidden md:text-4xl md:flex ml-10 font-display font-bold'>how_to_crypto.com</h2>
                 </Link>
-                <div className = {`${!menuOpen ? 'menubutton' : 'menubutton-open'} cursor-pointer md:hidden flex items-center flex justify-center items-center`}
+                <div className = {`${menuOpen ? 'menubutton' : 'menubutton-open'} cursor-pointer md:hidden flex items-center flex justify-center items-center`}
                     onClick={()=>{toggle();openMenu(true)}}>
                         
                 <svg className={`w-10 h-10`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
