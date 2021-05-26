@@ -11,7 +11,8 @@ module.exports = {
         wiggle: 'wiggle 1s ease-in-out infinite',
         spin: 'spin 8s linear infinite',
         bounce: 'bounce 2s infinite',
-        smallbounce : 'smallbounce 1s infinite'
+        smallbounce : 'smallbounce 1s infinite',
+        rotatebutton : 'rotatebutton 1s ease'
       },
       keyframes: {
         fadeIn: {
@@ -30,13 +31,16 @@ module.exports = {
           '0%': {transform: 'translateY(0)'},
           '50%': {transform: 'translateY(-10px)'},
           '100%': {transform: 'translateY(0)'}
+        },
+        rotatebutton: {
+           transform: 'rotate(-45deg)',
         }
       }
     },
   },
   variants: {
     extend: {
-      animation: ["motion-safe"],
+      animation: ['hover'],
     },
   },
   plugins: [],

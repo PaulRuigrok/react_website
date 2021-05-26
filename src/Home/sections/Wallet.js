@@ -1,9 +1,9 @@
 import React from 'react'
-import {ReactComponent as WalletSvg} from '../../media/wallet.svg'
-import walletCreate from '../../media/create_wallet.png'
+//import {ReactComponent as WalletSvg} from '../../media/wallet.svg'
+//import walletCreate from '../../media/create_wallet.png'
 import iconexWallet from '../../media/iconex_browser.png'
 import metamaskWallet from '../../media/metamask_browser.png'
-import {ReactComponent as ArrowDown} from '../../media/arrow_down.svg'
+//import {ReactComponent as ArrowDown} from '../../media/arrow_down.svg'
 import CheckButton from '../../Components/CheckButton'
 
 

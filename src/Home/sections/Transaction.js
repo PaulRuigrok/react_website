@@ -1,7 +1,6 @@
 import React from 'react'
 import { ReactComponent as PcSvg } from '../../media/pc-monitor.svg'
 import { ReactComponent as FileSvg } from '../../media/file_with_lines.svg'
-import Checkutton from '../../Components/CheckButton'
 import ClickToReveal from '../../Components/ClickToReveal'
 
 const Transaction = () => {
@@ -42,7 +41,7 @@ const Transaction = () => {
                 </div>
 
                 {/* right part of the container holding the network svg scheme */}
-                <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4git  bottom-0 z-30 md:z-10'>
+                <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4 bottom-0 z-30 md:z-10'>
                     <div className='flex flex-col sticky md:top-40 '>
                         <p className='text-center font-mono md:text-3xl pb-2 md:pb-8 text-gray-800'>the blockchain:</p>
                         <div className='grid grid-cols-3 gap-4 md:gap-20'>

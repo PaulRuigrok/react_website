@@ -10,7 +10,7 @@ const CheckButton = (props) => {
         onClick={toggle} >
         
             {!toggled ? 
-                <div className='relative w-full' >
+                <div className='relative w-full' >  
                     <div className='overflow-hidden'>
                         <div className= {`rounded-3xl px-6 py-4 border border-gray-200 
                             md:hover:bg-blue-200 duration-300 cursor-pointer`}>

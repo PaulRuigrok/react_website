@@ -5,7 +5,6 @@ import {Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Discord from './Discord'
-
 import './App.css';
 
 
@@ -15,21 +14,19 @@ function App() {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-// HIDE MENU WHEN SCREEN IS RESIZED
+  // HIDE MENU WHEN SCREEN IS RESIZED
   useEffect(() => {
     const hideMenu = () => {
       if(window.innerWidth > 768 && isOpen){
-        setIsOpen(false)
-        console.log('resized the menu')
+        setIsOpen(false)}
+      }
+      window.addEventListener('resize', hideMenu);
+      return () => {
+        window.removeEventListener('resize', hideMenu);
       }
     }
-    window.addEventListener('resize', hideMenu);
+  )
 
-    return () => {
-      window.removeEventListener('resize', hideMenu);
-      }
-    
-  })
 
   return (
     <>
