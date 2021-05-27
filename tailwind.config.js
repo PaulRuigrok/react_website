@@ -8,8 +8,8 @@ module.exports = {
     extend: {
       animation: {
         fadeIn: 'fadeIn 2s ease-in forwards',
-        wiggle: 'wiggle 1s ease-in-out infinite',
-        spin: 'spin 8s linear infinite',
+        wiggle: 'wiggle 100ms ease-in-out',
+        spin: 'spin 10000ms linear infinite',
         bounce: 'bounce 2s infinite',
         smallbounce : 'smallbounce 1s infinite',
         rotatebutton : 'rotatebutton 1s ease'
@@ -20,8 +20,8 @@ module.exports = {
           "100%": { opacity: 1 }
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-1deg)' },
-          '50%': { transform: 'rotate(1deg)' },
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         },
         bounce: {
           '0%, 100%': { transform: 'translateX(10px)'},

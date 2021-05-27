@@ -22,15 +22,15 @@ const Network = () => {
             </div>
             <div className='md:w-1/2 '>
                <div className='grid grid-cols-3 gap-6'>
-               <div className='flex justify-center animate-wiggle' style={{animationDelay:"100ms"}}><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle'  style={{animationDelay:"600ms"}}><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle'><PcSvg className='w-20 md:w-40 '/></div>
-               <div className='flex justify-center'><FileSvg className='w-60 h-20 md:h-60'/></div>
-               <div className='flex justify-center animate-wiggle' style={{animationDelay:"300ms"}}><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle'  style={{animationDelay:"635ms"}}><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle'  style={{animationDelay:"120ms"}}><PcSvg className='w-20 md:w-40'/></div>
-               <div className='flex justify-center animate-wiggle' style={{animationDelay:"50ms"}}><PcSvg className='w-20 md:w-40'/></div>     
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40 '/></div>
+               <div className='flex justify-center fill-current text-gray-800'><FileSvg className='w-60 h-20 md:h-60'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
+               <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>     
                </div>
             </div>
             <p className='mt-20 md:hidden mt-6 visible font-mono font-bold text-gray-800'>

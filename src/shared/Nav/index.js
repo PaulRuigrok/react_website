@@ -8,11 +8,30 @@ const Navbar = ({toggle}) => {
         setMenuOpen(!menuOpen)
     }
 
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    
+        if (!menuOpen){
+            if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            document.getElementById("logo").className = 'logo-post'
+            //document.getElementById("logo").style.transform = "scale(1) translate(0px,0px)";
+            } else {
+            //document.getElementById("logo").style.transform = "scale(1.7) translate(30%,40%px)";
+            document.getElementById("logo").className = 'logo'
+            }
+        } else {
+            document.getElementById("logo").className = 'logo-post'   
+        }
+    }
+    
     return (
         <div className = 'z-40 px-10 md:px-0 flex h-20 w-full items-center justify-center sticky top-0 bg-white'>
-            <div className = 'w-screen flex justify-between px-0 md:px-40'>
+            <div className = 'w-screen flex justify-between px-0 md:px-40 relative'>
                 <Link to="/" className = 'flex items-center justify-between'>
+                    <div id='logo' className={`logo ${menuOpen && 'logo-post'}`}>
                     <LogoSvg className='w-10 md:w-14 animate-spin'/>
+                    </div>
                     <h2 className= 'text-2xl hidden md:text-4xl md:flex ml-10 font-display font-bold'>how_to_crypto.com</h2>
                 </Link>
                 <div className = {`${!menuOpen ? 'menubutton' : 'menubutton-open'} cursor-pointer md:hidden flex items-center flex justify-center items-center`}
