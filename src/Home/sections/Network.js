@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactComponent as PcSvg } from '../../media/pc-monitor.svg'
-import { ReactComponent as FileSvg } from '../../media/file_with_lines.svg'
+import { ReactComponent as FileSvg } from '../../media/files.svg'
 
 
 const Network = () => {
@@ -20,7 +20,7 @@ const Network = () => {
             <span className='md:block hidden font-mono font-bold'>That's it! Just a bunch of computers all having a copy of the same Excel sheet. </span>
             </p>
             </div>
-            <div className='md:w-1/2 '>
+            <div className='md:w-1/2'>
                <div className='grid grid-cols-3 gap-6'>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>

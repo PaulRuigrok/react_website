@@ -67,7 +67,7 @@ const Wallet = () => {
         </div>
         <div className='w-11/12 md:w-5/12 grid gap-8 md:mt-20 md:mb-60'>
             <div className='mx-6 mt-20 md:m-8 '>
-                <p className='font-mono md:text-2xl text-gray-800'>
+                <p className='md:text-2xl text-gray-800'>
                     Alright! So:<br></br><br></br>
                     <span className='bg-blue-100 p-2 italic leading-7'>! -> apps like MetaMask are not really wallets but Wallet Managers</span>
                 </p>

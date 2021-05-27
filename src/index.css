@@ -30,11 +30,11 @@
     position: absolute;
     transform: scale(1.9) translate(40%,50%);
     transition-property: transform;
-    transition: transform 300ms ease-in-out
+    transition: transform 500ms ease-in-out
 }
 
 .logo-post {
     transform: scale(1) translate(0px,0px);
     transition-property: transform;
-    transition: transform 300ms ease-in-out
+    transition: transform 500ms ease-in-out
 }
