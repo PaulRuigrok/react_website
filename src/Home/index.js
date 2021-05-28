@@ -4,7 +4,7 @@ import Network from './sections/Network'
 import Wallet from './sections/Wallet'
 import SideNav from './side_nav'
 import Recap from './sections/Recap'
-import Transcation from './sections/Transaction'
+import Transaction from './sections/Transaction'
 
 
 
@@ -28,7 +28,7 @@ const Home = () => {
             <Network id='network'/>
             <Wallet id='wallet'/>
             <Recap/>
-            <Transcation/>
+            <Transaction/>
         </div>
         </>
     )

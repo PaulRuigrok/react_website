@@ -38,3 +38,14 @@
     transition-property: transform;
     transition: transform 500ms ease-in-out
 }
+
+.fade-in {
+    opacity: 100%;
+    transition: opacity 500ms ease-in-out;
+}
+
+.fade-out {
+    opacity: 0%;
+    transition: opacity 1000ms ease-in-out;
+}
+

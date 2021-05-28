@@ -1,17 +1,18 @@
 import React from 'react'
-//import {ReactComponent as WalletSvg} from '../../media/wallet.svg'
-//import walletCreate from '../../media/create_wallet.png'
 import iconexWallet from '../../media/iconex_browser.png'
 import metamaskWallet from '../../media/metamask_browser.png'
-//import {ReactComponent as ArrowDown} from '../../media/arrow_down.svg'
 import CheckButton from '../../Components/CheckButton'
-
+import { useInView, InView } from 'react-intersection-observer';
 
 const Wallet = () => {
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.1,
+      });
     return (
-    <>
-        <div id='wallet'></div>
-        <div className= 'md:w-10/12 grid mt-20 p-4 md:p-8'>
+    <div id='wallet' ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex flex-col items-center justify-center`}>
+        
+        <div  className= 'md:w-10/12 grid mt-20 p-4 md:p-8'>
             <div className = 'flex flex-col md:flex-row items-center'>    
                 <div className='md:w-1/2 grid gap-8'>
                     <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Wallets:</h1>
@@ -88,15 +89,12 @@ const Wallet = () => {
             </span>
             </p>     
         </div>   
-            
-            
-            
             <div className='md:w-1/4 w-8/12 md:justify-self-end mt-8'>
                 <CheckButton message="you beast, scroll on than!"/>
             </div>
         </div>
                     
-    </>
+    </div>
 
     )
 }

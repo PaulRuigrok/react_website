@@ -8,13 +8,14 @@ const Navbar = ({toggle}) => {
         setMenuOpen(!menuOpen)
     }
 
+    // on scroll scrollFunction is called
     window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-        
+    // scrollFunction checks if the screen is mobile. if not the "small" logo is being set.
+    function scrollFunction() {  
         if(window.screen.width >= 768){
             document.getElementById("logo").className = 'logo-post' 
         }
+        // if its a small screen the logo is big at the top of the document. If scrolled down the logo class is set to "logo-post" and moves and scales to a small version of the icon set on the top of the screen
         else {   
             if (!menuOpen){
                 if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
@@ -26,8 +27,6 @@ const Navbar = ({toggle}) => {
                 document.getElementById("logo").className = 'logo-post'   
             }
         } 
-    
-
     }
     
     return (
