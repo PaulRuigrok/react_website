@@ -31,7 +31,7 @@ const Introduction = () => {
                     </div>
                 </div>
             </div>
-            {inView ? document.getElementById('test').style.opacity = '100%' : document.getElementById('test').style.opacity = '0%' }
+            {/* {inView ? document.getElementById('test').style.opacity = '100%' : document.getElementById('test').style.opacity = '0%' } */}
         </div>
       
     )
