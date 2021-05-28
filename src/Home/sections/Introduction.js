@@ -10,10 +10,10 @@ const Introduction = () => {
       });
     
     return (
-        <div ref={ref} className={`${!inView ? 'fade-in' : 'fade-out'} flex flex-col jusitfy-center`}>
-            
+        <div ref={ref} className={` flex flex-col jusitfy-center`}>
+          
             <div id='goal'></div>
-            <div  className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-48 md:mt-96'>
+            <div id='test' className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-48 md:mt-96'>
                 <div  className = 'flex flex-col md:w-5/12'>    
                     <h1 className= 'text-4xl md:text-8xl font-display text-gray-800 font-bold text-left'>My goal:</h1>
                     <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-8 md:p-4 pl-2 md:m-8'>A lot of people won't even try to understand crypto's because it's to daunting. I want to show you some of the crypto-basics, step by step. The first time reading about Bitcoin I got really excited. Managing my own money without the need of a bank? 
@@ -31,7 +31,7 @@ const Introduction = () => {
                     </div>
                 </div>
             </div>
-
+            {inView ? document.getElementById('test').style.opacity = '100%' : document.getElementById('test').style.opacity = '0%' }
         </div>
       
     )
