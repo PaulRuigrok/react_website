@@ -10,7 +10,7 @@ const Introduction = () => {
       });
     
     return (
-        <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex flex-col jusitfy-center`}>
+        <div ref={ref} className={`${!inView ? 'fade-in' : 'fade-out'} flex flex-col jusitfy-center`}>
             
             <div id='goal'></div>
             <div  className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-48 md:mt-96'>
