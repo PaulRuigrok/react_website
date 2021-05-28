@@ -7,7 +7,7 @@ const ClickToReveal = (props) => {
     return (
        
         <div className='cursor-pointer' onClick={revealAnswer}>
-            { reveal ? <p className='font-mono text-xl text-gray-800'>
+            { reveal ? <p className='font-mono text-xl  text-gray-800'>
                 {props.num}: {props.text}
             </p>
             : <p className='font-mono text-xl text-gray-800'>
