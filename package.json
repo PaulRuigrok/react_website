@@ -1,3 +1,4 @@
+
 {
   "name": "crypto_website",
   "version": "0.1.0",
@@ -19,6 +20,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "web-vitals": "^1.1.2"
   },
+
   "scripts": {
     "start": "craco start",
     "build": "craco build",
