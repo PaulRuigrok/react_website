@@ -65,8 +65,8 @@ const Transaction = () => {
             <div className='p-8 w-full flex flex-col md:flex-row md:justify-end relative'>
                 
                 {/* left container holding the text */}
-                <div className='md:h-screen grid grid-rows-3 grid-cols-1 gap-4 md:p-8 md:w-4/12'>
-                    <div className=''>
+                <div className='flex flex-col md:p-8 md:w-4/12'>
+                    <div className='p-8'>
                         <p className= 'font-mono text-xl md:text-3xl pb-8 text-gray-800'> You absolute ledg, you have made it pretty far already! We are going to talk about transactions.<br></br><br></br> 
                         Ask yourself, what information do we need to send to the blockchain to make a transaction?
                         </p>
@@ -84,25 +84,27 @@ const Transaction = () => {
                         </div>
                     </div>
                     <div>
-                        <p className='font-mono md:text-3xl pb-8 text-gray-800'>
+                        <p className='font-mono md:text-3xl p-8 text-gray-800'>
                         Let's say you are using the Iconex Wallet Manager and you have 10 ICX in it. If you want to send some ICX to an other address you need to prepare a 'transaction request' in Iconex. for example:
                         </p>
-                        <form className='font-mono p-4' action="javascript:void(0);" onSubmit={()=>formcheck()}> 
-                            <span className='font-mono underline'>
-                            Transfer: <br></br><br></br></span>
-                            Balance: {balance}<br></br><br></br>
-                            Amount: <input type='number' id='input_amount' 
-                            placeholder='set'
-                            className='font-mono bg-yellow-200 rounded w-12 pl-2'></input><br></br><br></br>
-                            From: <input type='text' readOnly={true} 
-                            placeholder="your address"  className='font-mono bg-yellow-200 rounded w-30 pl-2'></input><br></br><br></br>
-                            To: <input type='text' readOnly={true} 
-                            placeholder="recipient address"  className='font-mono bg-yellow-200 rounded w-30 pl-2'></input><br></br><br></br>
-                            <input 
-                            type='submit' 
-                            onClick={ungreenImg}
-                            className='p-2 rounded-md bg-yellow-300 border border-gray-600'></input>
-                        </form>
+                        <div className='md:w-9/12 p-8'>
+                            <form className='font-mono bg-white p-4 rounded' action="javascript:void(0);" onSubmit={()=>formcheck()}> 
+                                <span className='font-mono underline'>
+                                Transfer: <br></br><br></br></span>
+                                Balance: {`${balance} icx`}<br></br><br></br>
+                                Amount: <input type='number' id='input_amount' 
+                                placeholder='set'
+                                className='font-mono bg-yellow-200 rounded w-12 pl-2'></input><br></br><br></br>
+                                From: <input type='text' readOnly={true} 
+                                placeholder="your address"  className='font-mono bg-yellow-200 rounded w-30 pl-2'></input><br></br><br></br>
+                                To: <input type='text' readOnly={true} 
+                                placeholder="recipient address"  className='font-mono bg-yellow-200 rounded w-30 pl-2'></input><br></br><br></br>
+                                <input 
+                                type='submit'
+                                onClick={ungreenImg}
+                                className='p-2 rounded-md bg-yellow-300 border border-gray-600'></input>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
@@ -110,7 +112,7 @@ const Transaction = () => {
                 <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4 bottom-0 z-30 md:z-10'>
                     <div className='flex flex-col sticky md:top-40 '>
                         <p className='text-center font-mono md:text-3xl pb-2 md:pb-8 text-gray-800'>the blockchain:</p>
-                        <div className='grid grid-cols-3 gap-6 md:gap-20'>
+                        <div className='grid grid-cols-3 gap-6 md:gap-8'>
  
                             <div id='pc1' className='pc_pic flex justify-center hover:animate-wiggle fill-current text-gray-800 '>
                                 <PcSvg  className='w-10 pc1 md:w-40 '/>
@@ -126,11 +128,11 @@ const Transaction = () => {
                             </div>
                             <div id='pc9' className='flex justify-center fill-current text-gray-800'>
                                 <FileSvg id='file_init' 
-                                    className='block w-10 md:h-60'
+                                    className='block w-10 md:w-40 md:h-60'
                                     style={{display:'block'}}
                                     />
                                 <FileCheckSvg id='file_checked' 
-                                    className='block w-10 md:h-60'
+                                    className='block w-10 md:w-40 md:h-60'
                                     style={{display:'none'}}/>
                             </div>
 

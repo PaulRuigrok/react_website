@@ -17,6 +17,9 @@ function App() {
   }
   // HIDE MENU WHEN SCREEN IS RESIZED
   useEffect(() => {
+    
+    if (window.screen.width >= 768){
+      document.getElementById("logo").className = 'logo-post' }
     const hideMenu = () => {
       if(window.innerWidth > 768 && isOpen){
         setIsOpen(false)}

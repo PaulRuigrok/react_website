@@ -26,7 +26,7 @@ const Network = () => {
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40 '/></div>
-               <div className='flex justify-center fill-current text-gray-800'><FileSvg className='w-60 h-20 md:h-60'/></div>
+               <div className='flex justify-center fill-current text-gray-800'><FileSvg className='w-40 h-20 md:h-60'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
                <div className='flex justify-center hover:animate-wiggle fill-current text-gray-800'><PcSvg className='w-20 md:w-40'/></div>
