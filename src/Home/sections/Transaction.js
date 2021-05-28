@@ -3,16 +3,11 @@ import { ReactComponent as PcSvg } from '../../media/pc-monitor.svg'
 import { ReactComponent as FileSvg } from '../../media/files.svg'
 import { ReactComponent as FileCheckSvg} from '../../media/files_check.svg'
 import ClickToReveal from '../../Components/ClickToReveal'
-import { useInView, InView } from 'react-intersection-observer';
+
 
 const Transaction = () => {
     const [balance, setBalance] = useState(10)
-    const { ref, inView, entry } = useInView({
-        /* Optional options */
-        threshold: 0.2,
-      });
-    
-
+ 
     // Resets file color and image to initial state when user submits another request.
     const ungreenImg = () =>{
         // color
@@ -64,9 +59,9 @@ const Transaction = () => {
 
     return (
         <div className='bg-yellow-300 w-full relative'>
-            <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex flex-col items-center justify-center`}>
+            <div  className={` flex flex-col items-center justify-center`}>
 
-                <div id='transactions' className='flex flex-col justify-center items-center pt-40 md:pt-80 md:mb-40'>
+                <div id='transactions'className={`flex flex-col justify-center items-center pt-40 md:pt-80 md:mb-40`}>
                     <h1 className= 'text-4xl md:text-8xl font-display text-gray-800 font-bold text-left'>Transactions:</h1>
                     <p className= 'font-mono text-2xl md:text-3xl text-gray-800 m-8'>The cool part.</p>
                 </div>
