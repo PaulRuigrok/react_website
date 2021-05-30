@@ -4,6 +4,7 @@ import Dropdown from './shared/Nav/Dropdown'
 import {Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import About from './About'
+import Contact from './Contact'
 import Discord from './Discord'
 import './App.css';
 
@@ -39,7 +40,8 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />
-        <Route path='/discord' component={Discord} />
+        <Route path='/discord' component={Discord}/>
+        <Route path='/contact' component={Contact} />
       </Switch>
       
     </>
