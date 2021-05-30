@@ -6,12 +6,11 @@ import { useInView, InView } from 'react-intersection-observer';
 const Network = () => {
     const { ref, inView, entry } = useInView({
         /* Optional options */
-        threshold: 0.5,
+        threshold: 0.1,
       });
-
+      
     return (
         <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex justify-center`}>  
-    
             <div id="network"></div>
             <div className= 'w-11/12 md:w-10/12 h-full bg-yellow-300 items-center mt-20 p-4 md:p-8 justify-between rounded'>
                 <div className = 'flex flex-col md:flex-row items-center '>    

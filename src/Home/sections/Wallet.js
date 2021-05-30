@@ -2,16 +2,17 @@ import React from 'react'
 import iconexWallet from '../../media/iconex_browser.png'
 import metamaskWallet from '../../media/metamask_browser.png'
 import CheckButton from '../../Components/CheckButton'
-import { useInView, InView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 
 const Wallet = () => {
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0.1,
       });
+
     return (
     <div id='wallet' ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex flex-col items-center justify-center`}>
-        
+        <div className='absolute top-40 h-20 bg-red-500'>{`in view = ${inView}`}</div>
         <div  className= 'md:w-10/12 grid mt-20 p-4 md:p-8'>
             <div className = 'flex flex-col md:flex-row items-center'>    
                 <div className='md:w-1/2 grid gap-8'>
@@ -78,7 +79,7 @@ const Wallet = () => {
                     <p className='md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few ways to store a 'recovery-method' in case you forget your password, your computer dies or whatever bad things can happen in life. You can use this recovery method to rebuild you wallet, including the private key. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.(aka; you lost your money in that wallet.)</p>
                 </div>
         </div>
-        <div className=''>
+        <div>
             <p className ='font-mono text-gray-800 md:text-2xl'>
                 Most Wallet Managers give you three options:<br></br><br></br>
                 1. Write down (and store in a safe place) the so called 'Seed Phrase'. These are 12 or 24 words.<br></br><br></br>
@@ -89,7 +90,7 @@ const Wallet = () => {
             </span>
             </p>     
         </div>   
-            <div className='md:w-1/4 w-8/12 md:justify-self-end mt-8'>
+            <div className='md:w-1/2 w-8/12 md:justify-self-end mt-8'>
                 <CheckButton message="you beast, scroll on than!"/>
             </div>
         </div>

@@ -19,6 +19,8 @@ const Transaction = () => {
    
     // form for animation of blockchain depening on the input of the form (valid or unvalid request)
     const formcheck = () =>{
+        
+        ungreenImg()
         // timerfunction for delaying iteration
         const timer = ms => new Promise(res => setTimeout(res, ms))
         // when amount to send does not exceed the balance. 
@@ -34,25 +36,25 @@ const Transaction = () => {
             document.getElementById("file_init").style.display = 'none'
             document.getElementById("file_checked").style.display = 'block'
             setBalance(balance - 0.01)
+            setBalance(balance - input)   
         }
         // input of the form
-        let x = document.getElementById('input_amount').value
+        let input = document.getElementById('input_amount').value
         // when the input is higher than the balance pc image flashes red
         const bad_submit = (num, color) => {
             document.getElementById("pc" + num).className = 'pc_pic flex justify-center hover:animate-wiggle fill-current ' + color;
             setTimeout(function(){
                 document.getElementById("pc" + num).className = 'pc_pic flex justify-center hover:animate-wiggle fill-current text-gray-800';
             }, 1000); 
-
         }
-        if (x > balance){
+
+        if (input > balance){
             bad_submit('1', 'text-red-500')
             }
         
         else {
-            document.getElementById("input_amount").value = ''
-            setBalance(balance - x)
-            good_submit()      
+            good_submit()  
+            document.getElementById("input_amount").value = ''  
         }
    
     }
@@ -92,7 +94,7 @@ const Transaction = () => {
                             Let's say you are using the Iconex Wallet Manager and you have 10 ICX in it. If you want to send some ICX to an other address you need to prepare a 'transaction request' in Iconex. for example:
                             </p>
                             <div className='md:w-9/12 p-2'>
-                                <form className='font-mono bg-white p-4 rounded' action="javascript:void(0);" onSubmit={()=>formcheck()}> 
+                                <div className='font-mono bg-white p-4 rounded'> 
                                     <span className='font-mono underline'>
                                     Transfer: <br></br><br></br></span>
                                     Balance: {`${balance} icx`}<br></br><br></br>
@@ -106,9 +108,9 @@ const Transaction = () => {
                                     placeholder="recipient address"  className='font-mono bg-yellow-200 rounded w-30 pl-2'></input><br></br><br></br>
                                     <input 
                                     type='submit'
-                                    onClick={ungreenImg}
+                                    onClick={formcheck}
                                     className='p-2 rounded-md bg-yellow-300 border border-gray-600'></input>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -162,7 +164,7 @@ const Transaction = () => {
             
             </div>   
         <div className='flex justify-center pt-20'>
-            <div className='md:w-8/12 h-screen flex justify-center p-8 '>
+            <div className='md:w-8/12 flex justify-center p-8 '>
                 <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-4 pl-2 md:m-8'>
                     So the transaction-request is submitted to one of the computer that is connected to the blockchain and if everything checks out the "Excel sheet" is changed. Try and send more than your balance, your transaction will be rejected.<br></br><br></br>
                     Let's say you have hacked the computer you are sending the transaction-request to, and you fool it into approving you sending more tokens than you have.<br></br><br></br>

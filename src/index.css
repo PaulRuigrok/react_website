@@ -7,13 +7,13 @@
     max-height: 0px;
     overflow: hidden;
     /* from opened to closed*/
-    transition: max-height 500ms cubic-bezier(0.1, 0.41, 0.35, 1.54) 
+    transition: max-height 300ms ease-in-out
 }
 
 .menucustom-expanded {
     max-height: 400px;
     /* from closed to opened*/
-    transition: max-height 600ms cubic-bezier(0.1, 0.41, 0.35, 1.54) 
+    transition: max-height 300ms ease-in-out
 }
 
 .menubutton {
@@ -41,7 +41,7 @@
 
 .fade-in {
     opacity: 1;
-    transition: opacity 500ms cubic-bezier(0, 0.2, 0, 0.97);
+    transition: opacity 1000ms ease-in-out;
 }
 
 .fade-out {
