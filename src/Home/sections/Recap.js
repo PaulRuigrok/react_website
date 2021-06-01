@@ -1,10 +1,10 @@
 import React from 'react'
-import { useInView, InView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 
 const Recap = () => {
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
-        threshold: 0.5,
+        threshold: 0.1,
       });
     return (
     <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex flex-col items-center justify-center`}>

@@ -5,9 +5,9 @@ import CheckButton from '../../Components/CheckButton'
 import { useInView } from 'react-intersection-observer';
 
 const Wallet = () => {
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
-        threshold: 0.1,
+        threshold: 0.05,
       });
 
     return (
@@ -47,14 +47,14 @@ const Wallet = () => {
                     The word 'wallet' is being thrown around a lot. I find the word a bit miss-used sometimes. You know now what a wallet is, right?<br></br><br></br>
                     Maybe you've heard of MetaMask or TrustWallet. These are not wallets but apps that manage your wallet. They keep track of the balance and hold the [ public * private ] keypair.<br></br><br></br>
                     Let's call these apps 'Wallet Managers'.<br></br><br></br>
-                    When you want to make a transcation from your wallet you can use a Wallet Manager instead of manually sending a message with code to the blockchain containing the specifications of the transaction you want to make.
+                    When you want to make a transaction from your wallet you can use a Wallet Manager instead of manually sending a message with code to the blockchain containing the specifications of the transaction you want to make.
                     <br></br><br></br><br></br>
                     two examples of Wallet Managers:</p>
                 <div className='flex flex-col md:flex-row justify-around items-center my-8 md:mt-10 '>
                     <div className='md:w-2/6'>
                         <img src={metamaskWallet} alt='Iconex_wallet' className='rounded-md shadow-2xl w-full'/>
                         <p className= 'font-mono md:text-xl text-gray-400 font-thin md:mt-8 mb-20 p-4 italic'> MetaMask:
-                        Can connect with several different blockchains. In the image you can see it has the Ethereum Mainnet selected and that this wallet/address has some Ether in it. 'Account 1' is just the a reference to the wallet set within the Wallet Manager, the '0xAc1c...be72' is the public key of the wallet.
+                        Can connect with several different blockchains. In the image you can see it has the Ethereum Mainnet selected and that this wallet/address has some Ether in it. 'Account 1' is just the a reference to the wallet set within the Wallet Manager, the '0xAc1c...be72' is the public key of the wallet. 
                         </p>
                     </div>
                     <div className='md:w-2/6'>
@@ -63,38 +63,39 @@ const Wallet = () => {
                         It's the Google Chrome-extension (a app inside your chrome-browser) which let you connect to the Icon Blockchain.
                         You can see the address Iconex is managing, has some ICX in it. The long strings are the public addresses. Like the MetaMask wallet you can see the 'hx....' strings have 'a name'. Naming a wallet inside you Wallet Manager makes it easier to know what wallet your managing (instead of the long string of characters that is your public key)
                         </p>
-                    </div>  
+                    </div> 
                 </div>
+                <p className='font-mono p-4 text-xl text-gray-800'>A Wallet Manager gets the balance of your wallet by looking at the blockchain it is connected to. It's simply just showing it, the Wallet Manager does not "contain" coins. It does contain the private key of your address/wallet which is needed to send out coins from your wallet.</p> 
             </div> 
         </div>
         <div className='w-11/12 md:w-5/12 grid gap-8 md:mt-20 md:mb-60'>
             <div className='mx-6 mt-20 md:m-8 '>
                 <p className='md:text-2xl text-gray-800'>
                     Alright! So:<br></br><br></br>
-                    <span className='bg-blue-100 p-2 italic leading-7'>! -> apps like MetaMask are not really wallets but Wallet Managers</span>
+                    <span className='bg-blue-100 p-2 italic leading-7'>! -> apps like MetaMask are not really wallets but rather Wallet
+                    <span className='font-bold'> Managers</span></span>
                 </p>
             </div>
             <div className='md:flex md:justify-center'>
                 <div className= 'shadow-xl md:my-8 my-4 p-8 md:p-0 rounded'>
-                    <p className='md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few ways to store a 'recovery-method' in case you forget your password, your computer dies or whatever bad things can happen in life. You can use this recovery method to rebuild you wallet, including the private key. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address.(aka; you lost your money in that wallet.)</p>
+                    <p className='md:text-2xl font-mono text-red-600 md:p-6'>Important note: When you create a wallet with a Wallet Manager you will get a few ways to store a 'recovery-method' in case you forget your password, your computer dies or whatever bad things can happen in life. You can use this recovery method to rebuild you wallet, including the private key. And keep in mind, if you don't have the private key of a address/wallet you CAN NOT transfer funds from that address (aka: you lost the ability to send out the money from that wallet.)</p>
                 </div>
         </div>
         <div>
             <p className ='font-mono text-gray-800 md:text-2xl'>
                 Most Wallet Managers give you three options:<br></br><br></br>
-                1. Write down (and store in a safe place) the so called 'Seed Phrase'. These are 12 or 24 words.<br></br><br></br>
-                2. Download the so called 'Keystore file'. Keep this file safe! On a USB stick which is in a safe place for example. Not only your Google Drive or something !( in case you get hacked or accidently leave your Google Drive open somewhere )<br></br><br></br>
+                1. Write down (and store in a safe place) the so called 'Seed Phrase'. These are 12 or 24 (sort of) randomly generated words.<br></br><br></br>
+                2. Download the so called 'Keystore file'. Keep this file safe! On a USB stick which is in a safe place for example. Not only your Google Drive or something! (in case you get hacked or accidently leave your Google Drive open somewhere)<br></br><br></br>
                 3. Write down (and store in a safe place) the actual private key.<br></br><br></br><br></br>
-            <span className='font-mono font-thin text-gray-800 italic'>
-                Note that when you use a Wallet Manager to create a new wallet you also get the option to recover a wallet. If you choose this option you will be asked to give one of the three above ways to recover (the seed phrase, keystore file or private key).
+            <span className='font-mono font-thin text-gray-800 italic pt-8'>
+                Note that when you use a Wallet Manager to create a new wallet you also get the option to recover a wallet. If you choose this option you will be asked to give one of the three above ways to recover (the seed phrase, keystore file or private key). And realize that any one can, with one of the above, gain access to your wallet and thus can send out the coins in your wallet. So never, for example, fill in the Seed Phrase words on any website or something, your wallet will be emptied.
             </span>
             </p>     
         </div>   
             <div className='md:w-1/2 w-8/12 md:justify-self-end mt-8'>
                 <CheckButton message="you beast, scroll on than!"/>
             </div>
-        </div>
-                    
+        </div>           
     </div>
 
     )

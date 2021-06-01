@@ -3,7 +3,7 @@ import { ReactComponent as PcSvg } from '../../media/pc-monitor.svg'
 import { ReactComponent as FileSvg } from '../../media/files.svg'
 import { ReactComponent as FileCheckSvg} from '../../media/files_check.svg'
 import ClickToReveal from '../../Components/ClickToReveal'
-
+import CheckButton from '../../Components/CheckButton'
 
 const Transaction = () => {
     const [balance, setBalance] = useState(10)
@@ -35,8 +35,8 @@ const Transaction = () => {
             document.getElementById("pc9").className = 'pc_pic flex justify-center hover:animate-wiggle fill-current text-green-500';
             document.getElementById("file_init").style.display = 'none'
             document.getElementById("file_checked").style.display = 'block'
-            setBalance(balance - 0.01)
-            setBalance(balance - input)   
+            let subtract_amount = 0.01 + parseInt(input)
+            setBalance(balance - subtract_amount)
         }
         // input of the form
         let input = document.getElementById('input_amount').value
@@ -163,15 +163,18 @@ const Transaction = () => {
                 </div>    
             
             </div>   
-        <div className='flex justify-center pt-20'>
-            <div className='md:w-8/12 flex justify-center p-8 '>
+        <div className='flex flex-col items-center py-20'>
+            <div className='md:w-8/12 flex flex-col md:w-8/12 justify-center p-8 '>
                 <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-4 pl-2 md:m-8'>
                     So the transaction-request is submitted to one of the computer that is connected to the blockchain and if everything checks out the "Excel sheet" is changed. Try and send more than your balance, your transaction will be rejected.<br></br><br></br>
                     Let's say you have hacked the computer you are sending the transaction-request to, and you fool it into approving you sending more tokens than you have.<br></br><br></br>
                     In that case the next computer that has to approve the transaction-request your submitting will see that something is wrong and your request will be denied. <br></br><br></br>
                     So if you want to 'fool' the network (and send more ICX than you have, for example) you will have to hack every computer that is connected to the network, and if the network is big enough this is practicly impossible.<br></br><br></br>
-                    <span className='font-mono text-base'>//note that even if you send 0 ICX you will still pay a transaction fee. </span>
+                    <span className='font-mono text-base'>* note that even if you send 0 ICX you will still pay a transaction fee. </span>
                 </p>
+            </div>
+            <div className='md:w-4/12 w-8/12 md:justify-self-end m-8'>
+                <CheckButton message='Perfect, last step!' />
             </div>
         </div>
         </div>

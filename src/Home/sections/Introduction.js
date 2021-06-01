@@ -1,10 +1,10 @@
 import React from 'react'
 import CheckButton from '../../Components/CheckButton'
-import { useInView, InView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 
 
 const Introduction = () => {
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
         threshold: 0.15
       });
@@ -16,10 +16,14 @@ const Introduction = () => {
             <div className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-48 md:mt-96'>
                 <div ref={ref} className = {`flex flex-col md:w-5/12 `}>    
                     <h1 className= 'text-4xl md:text-8xl font-display text-gray-800 font-bold text-left'>My goal:</h1>
-                    <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-8 md:p-4 pl-2 md:m-8'>A lot of people won't even try to understand crypto's because it's to daunting. I want to show you some of the crypto-basics, step by step. The first time reading about Bitcoin I got really excited. Managing my own money without the need of a bank? 
+                    <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-8 md:p-4 pl-2 md:m-8'>Cryptocurrencies are so much more than just 'Coins that you can buy and sell on Binance'. But cryptocurrencies bring something new to mankind; A way to transfer value across the world without the need of a third party (banks/paypal/visa etc). <br></br><br></br> I want to show you some of the crypto-basics, step by step. Hoping to help you understand the basics of managing your own money without the need of a bank, or some suit at a bank. 
                     <br></br><br></br>
-                    I think every responsible person should want that. But a side from that, I want to demystify some of the basics of crypto.
+                    Don't you think it's weird that you work your ass off week in week out, and then voluntary give the money you get for you work to some guy in a suit?
                     <br></br><br></br>
+                    I think every responsible person should want to be the keeper of his/her own earnings. <br></br><br></br>
+                    So crypto's are much more than just some get rich quick thing, even tho that's the narrative that is being pushed the most by media and that is understandable; Because fear and 'fear of missing out', FOMO, generate clicks / money. And media companies need money to continue existing. 
+                    <br></br><br></br>
+                    I made this website because I want show as much people as possible some of the practical basics of crypto.
                     I thaught myself without any programming background and I'm sure you can too, if we take it step by step.<br></br><br></br>
                     We'll be using the 'got it?' button to help you taking it step by step and taking a breather after every step.<br></br><br></br>
                     Paul
