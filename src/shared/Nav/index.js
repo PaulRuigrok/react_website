@@ -8,19 +8,19 @@ const Navbar = ({isOpen, toggle}) => {
     window.onscroll = function() {scrollFunction()};
     // scrollFunction checks if the screen is mobile. if not the "small" logo is being set.
     function scrollFunction() {  
-        if(window.screen.width >= 768){
+        if(window.screen.width > 768){
             document.getElementById("logo").className = 'logo-post' 
         }
         // if its a small screen the logo is big at the top of the document. If scrolled down the logo class is set to "logo-post" and moves and scales to a small version of the icon set on the top of the screen
         else {   
             if (!isOpen){
                 if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-                document.getElementById("logo").className = 'logo-post'
+                document.getElementById("logo").className = 'logo-post'                
                 } else {
-                document.getElementById("logo").className = 'logo'
+                document.getElementById("logo").className = 'logo'                
                 }
             } else {
-                document.getElementById("logo").className = 'logo-post'   
+                document.getElementById("logo").className = 'logo-post'               
             }
         } 
     }
@@ -30,8 +30,8 @@ const Navbar = ({isOpen, toggle}) => {
             <div className = 'w-screen flex justify-between px-0 md:px-40 relative'>
                 <Link to="/" className = 'flex items-center justify-between'>
                     {/* this is the logo, should spin on click menu item as well */}
-                    <div id='logo' className={`md:logo-post logo ${!isOpen && 'logo-post'}`}>
-                    <LogoSvg className='w-8 md:w-14 animate-spin'/>
+                    <div id='logo' className={`md:logo-post logo ${isOpen && 'logo-post'}`}>
+                    <LogoSvg id="logo_nav" className='w-8 md:w-14 animate-spin'/>
                     </div>
                     <h2 className= 'text-2xl hidden md:text-4xl md:flex ml-10 font-display font-bold'>how_to_crypto.com</h2>
                 </Link>

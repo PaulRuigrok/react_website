@@ -1,19 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useInView } from 'react-intersection-observer';
 
 const Giveicx = () => {
     const { ref, inView } = useInView({
         /* Optional options */
         threshold: 0.1,
-      });
+    });
     
+    // copy tweet text to clipboard
+    const buttonClick = (e) =>{
+        e.preventDefault()
+        let text = e.target.textContent
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el); 
+    }
+
+    // Show the twitter message to tweet including the icx address of the user
     const [isVisible, setIsVisible] = useState(false)
     const [addressInput, setAddressInput] = useState('')
-
-
     let set_address = () =>{  
         let address = document.getElementById("icx_address").value
-        console.log('address')
         if (address.startsWith('hx')){
             setIsVisible(true)
             setAddressInput(address)
@@ -22,7 +32,14 @@ const Giveicx = () => {
             setIsVisible(false)
         }
     }
+
+    // Show the checkmark when tweet-text is copied
     
+    const show_check_mark = () =>{
+        document.getElementById("checkmark").style.display = 'block'
+    }
+
+
     
     
     return (
@@ -41,11 +58,24 @@ const Giveicx = () => {
                     className='font-mono border w-full rounded md:text-2xl'></input>
                 </div>
                 <p className='font-mono pt-8 md:text-2xl'>Copy the text below, go to twitter and paste it in a new tweet:</p>
-                <div className='py-8 rounded'>
+                <div className='py-8 rounded cursor-pointer' onClick={buttonClick}>
                     {!isVisible ? 
-                    <p className='font-mono font-light italic md:text-2xl'>error: first paste in your address above...</p> : 
-                    <p className='font-mono italic bg-gray-100 border md:text-2xl'>@paul__rouge I Just completed the beginners-tutorial on crypto payments on www.blabla.com and will receive some free $icx to practice!<br></br> My ICX address = {addressInput}</p>}
+                        <p className='font-mono font-light italic md:text-2xl'>error: first paste in your address above...</p> : 
+                        <div className='relative'>
+                        <p className='tweet font-mono italic bg-gray-100 border md:text-2xl border p-2'>
+                        
+                        @paul__rouge I Just completed the beginners-tutorial on crypto payments on www.blabla.com and will receive some free $icx to practice!<br></br> 
+                        My ICX address = {addressInput}</p>
+                        <svg id="checkmark" 
+                        style={{display: 'none'}} 
+                        onClick={show_check_mark}
+                        className="w-10 h-10 absolute top-2 right-2 text-green-500 z-30" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        
+                        }
+                        
                 </div>  
+                
             </div>
         </div>
     )
