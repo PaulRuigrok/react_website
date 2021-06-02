@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect} from 'react'
 import Introduction from './sections/Introduction'
 import Network from './sections/Network'
 import Wallet from './sections/Wallet'
@@ -8,6 +8,11 @@ import Transaction from './sections/Transaction'
 import Giveicx from './sections/Giveicx'
 
 const Home = () => {
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[]
+    )
+    
     return (
         <>
         <div id='home'></div>

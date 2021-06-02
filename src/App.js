@@ -13,9 +13,9 @@ function App() {
   // TOGGLE MENU
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
-
     setIsOpen(!isOpen)
   }
+  
   // HIDE MENU WHEN SCREEN IS RESIZED
   useEffect(() => {
     
@@ -35,8 +35,8 @@ function App() {
 
   return (
     <>
-      <Navbar toggle={toggle}/>
-      <Dropdown isOpen={isOpen} toggle={toggle} />
+      <Navbar isOpen={isOpen} toggle={toggle}/>
+      <Dropdown isOpen={isOpen} toggle={toggle}  />
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/about' component={About} />

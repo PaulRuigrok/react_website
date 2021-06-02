@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import {ReactComponent as PixSvg} from '../../src/media/pix_art.svg'
 
 const About = () => {
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[]
+    )
+    
     return (
         <div className='flex justify-center'>
             <div className='md:w-5/12 flex justify-center flex-col items-center p-8'> 
-                <PixSvg className='rounded-full w-40 m-12'/>
+                {/* THIS SVG MAKES THE COLORS OF THE LOGO CHANGE... */}
+                {/* <PixSvg className='rounded-full w-40 m-12 z-10'/> */}
                 <h1 className= 'p10 text-4xl font-display text-gray-800 font-bold text-left mb-8'>about me:</h1>
                 <p className='font-mono md:text-2xl mb-8'>
                     I am Paul, a random guy on the internet that want to introduce as many people as possible to crypto-currencies.<br></br><br></br>

@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Contact = () => {
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[]
+    )
     return (
         <div className='flex justify-center items-center h-80 w-full'>
             <a href='https://www.twitter.com/paul__rouge' className='border p-6 rounded'

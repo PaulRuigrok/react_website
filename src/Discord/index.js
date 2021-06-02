@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 
 const Discord = () => {
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[]
+    )
     return (
         <div className='flex flex-col justify-center items-center h-80 w-full'>
             <p className='font-mono text2xl md:text-4xl text-gray-800 p-10'>
