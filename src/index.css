@@ -36,6 +36,17 @@
     transition: transform 250ms cubic-bezier(0.26, 0.6, 0.48, 1.62)
 }
 
+.mobile_nav_list_closed {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 250ms ease-in-out
+}
+
+.mobile_nav_list_open {
+    overflow: hidden;
+    max-height: 700px;
+    transition: max-height 200ms ease-out
+}
 
 .logo {
     position: absolute;

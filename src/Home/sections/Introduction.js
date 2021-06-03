@@ -13,7 +13,7 @@ const Introduction = () => {
         <div  className={`${inView ?'fade-in flex flex-col jusitfy-center' : 'fade-out flex flex-col jusitfy-center' } `}>
             <div id='goal'></div>
             
-            <div className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-48 md:mt-96'>
+            <div className= 'w-11/12 md:w-10/12 flex justify-center p-6 items-center mt-20 md:mt-96'>
                 <div ref={ref} className = {`flex flex-col md:w-5/12 `}>    
                     <h1 className= 'text-4xl md:text-8xl font-display text-gray-800 font-bold text-left'>My goal:</h1>
                     <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-8 md:p-4 pl-2 md:m-8'>Cryptocurrencies are so much more than just "Coins that you can buy and sell on Binance". Cryptocurrencies bring something new to mankind; A way to transfer value across the world without the need of a third party (banks/paypal/visa etc). <br></br><br></br> I want to show you some of the crypto-basics, step by step. Hoping to help you understand the basics of managing your own money without the need of a bank/ some suit at a bank. 
