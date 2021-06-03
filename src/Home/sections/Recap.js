@@ -20,17 +20,17 @@ const Recap = () => {
                 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>
                     <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Blockchain</h1>
-                    <p className= 'font-mono text-gray-800'>A blockchain is just a network of computers all around the world, all sharing a copy of the same file. Which contains addresses with their balances.</p>
+                    <p className= 'font-mono text-gray-800'>A blockchain is just a network of computers spread around the world, all sharing a copy of the same file / ledger / Excel sheet. Which contains addresses with their balances.</p>
                 </div>
 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>                    
                 <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Wallet</h1>
-                    <p className= 'font-mono text-gray-800'>The term 'wallet' is used in a different ways, but basicly a wallet is a different word for an address on a blockchain and consist out of a<br></br> [public key * private key] - pair <br></br> and a balance.</p>
+                    <p className= 'font-mono text-gray-800'>The term 'wallet' is used in a few different ways, but basicly a wallet is a different word for an address on a blockchain and consist out of a:<br></br> [public key * private key] - pair <br></br> and a balance.</p>
                 </div>
                 
                 <div className='bg-white border shadow-lg p-4 m-2 md:p-8 md:m-4 rounded-md'>
                     <h1 className='text-2xl md:text-4xl font-display font-bold mb-4'>Wallet Managers</h1>
-                    <p className= 'font-mono text-gray-800'>An app, or hardware device, that allows you to create wallets and send funds from your wallets without the need of making technical steps.</p>
+                    <p className= 'font-mono text-gray-800'>An app, or hardware device, that allows you to create wallets/addresses and send funds from your wallets without the need of making technical steps.<br></br>It makes talking to a blockchain easier for you.</p>
                 </div>
 
             </div>

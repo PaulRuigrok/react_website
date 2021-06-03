@@ -1,11 +1,17 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { useInView } from 'react-intersection-observer';
 
 const Giveicx = () => {
     const { ref, inView } = useInView({
         /* Optional options */
-        threshold: 0.1,
+        threshold: 0.15,
     });
+    
+    // Show the checkmark when tweet-text is copied
+    const [showCheckmark, setShowCheckmark] = useState(false)
+    const show_check_mark = () =>{
+        setShowCheckmark(true)
+    }
     
     // copy tweet text to clipboard
     const buttonClick = (e) =>{
@@ -17,6 +23,7 @@ const Giveicx = () => {
         el.select();
         document.execCommand('copy');
         document.body.removeChild(el); 
+        setShowCheckmark(true)
     }
 
     // Show the twitter message to tweet including the icx address of the user
@@ -32,15 +39,6 @@ const Giveicx = () => {
             setIsVisible(false)
         }
     }
-
-    // Show the checkmark when tweet-text is copied
-    
-    const show_check_mark = () =>{
-        document.getElementById("checkmark").style.display = 'block'
-    }
-
-
-    
     
     return (
         <div id='geticx' ref={ref} className= {`${inView ? 'fade-in' : 'fade-out'} w-11/12 md:w-5/12 flex flex-col px-4 py-12 md:p-8`}>
@@ -58,24 +56,29 @@ const Giveicx = () => {
                     className='font-mono border w-full rounded md:text-2xl'></input>
                 </div>
                 <p className='font-mono pt-8 md:text-2xl'>Copy the text below, go to twitter and paste it in a new tweet:</p>
+                
                 <div className='py-8 rounded cursor-pointer' onClick={buttonClick}>
                     {!isVisible ? 
-                        <p className='font-mono font-light italic md:text-2xl'>error: first paste in your address above...</p> : 
-                        <div className='relative'>
-                        <p className='tweet font-mono italic bg-gray-100 border md:text-2xl border p-2'>
-                        
-                        @paul__rouge I Just completed the beginners-tutorial on crypto payments on www.blabla.com and will receive some free $icx to practice!<br></br> 
-                        My ICX address = {addressInput}</p>
-                        <svg id="checkmark" 
-                        style={{display: 'none'}} 
-                        onClick={show_check_mark}
-                        className="w-10 h-10 absolute top-2 right-2 text-green-500 z-30" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <p className='font-mono font-light italic md:text-2xl'>error: first paste in your Icon address above...</p> : 
+                        <div>
+                            <p className='text-s text-center font-mono italic p-4'> click/tap to copy: </p>
+                            <div className='relative'>  
+                            <p className='tweet font-mono italic bg-gray-100 border md:text-2xl border p-4 pr-8'>
+                            
+                            @paul__rouge I Just completed the beginners-tutorial on crypto-payments on www.blabla.com and will receive some free $icx to practice! Go check the website if you want to learn some basics about crypto!<br></br> 
+                            My ICX address = {addressInput}</p>
+
+                            <svg id="checkmark" 
+                            onClick={show_check_mark}
+                            className={`w-10 h-10 absolute top-2 right-2 text-green-500 z-30 
+                            ${!showCheckmark ? 'checkmark-init' : 'checkmark-post' } `} 
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <p className='font-mono md:text-2xl py-12'>You will receive an automated reply-tweet within an hour or so, containing the transaction link so you can check out the transaction on the Icon Blockchain! How cool is that!<br></br><br></br> At that moment you can see some icx coins in your wallet! <br></br><br></br>
+                            <span className='font-mono italic text-sm'>(consider following me on Twitter me while you're at it.)</span></p>
                         </div>
-                        
-                        }
-                        
-                </div>  
-                
+                    }     
+                </div>   
             </div>
         </div>
     )

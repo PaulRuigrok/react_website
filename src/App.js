@@ -6,6 +6,7 @@ import Home from './Home'
 import About from './About'
 import Contact from './Contact'
 import Discord from './Discord'
+import Footer from './shared/Footer'
 import './App.css';
 
 
@@ -14,6 +15,10 @@ function App() {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
+  }
+  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
+  const toggle_mobile_nav = () => {
+    setMobileNavIsOpen(!mobileNavIsOpen)
   }
   
   // HIDE MENU WHEN SCREEN IS RESIZED
@@ -43,6 +48,7 @@ function App() {
         <Route path='/discord' component={Discord}/>
         <Route path='/contact' component={Contact} />
       </Switch>
+      <Footer mobileNavIsOpen={mobileNavIsOpen} toggleMobileNav={toggle_mobile_nav} />
       
     </>
   );

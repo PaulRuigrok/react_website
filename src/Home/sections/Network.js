@@ -10,7 +10,7 @@ const Network = () => {
       });
       
     return (
-        <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex justify-center`}>  
+        <div ref={ref} className={`${inView ? 'fade-in' : 'fade-out'} flex justify-center md:mt-40`}>  
             <div id="network"></div>
             <div className= 'w-11/12 md:w-10/12 h-full bg-yellow-300 items-center mt-20 p-4 md:p-8 justify-between rounded'>
                 <div className = 'flex flex-col md:flex-row items-center '>    
@@ -42,7 +42,7 @@ const Network = () => {
                     <p className='mt-20 md:hidden mt-6 visible font-mono font-bold text-gray-800'>
                     That's it! Just a bunch of computers all having a copy of the same Excel sheet.
                     </p>  
-                    <p className='my-20 md:hidden visible font-mono text-gray-800 italic'>
+                    <p className='my-12 md:hidden text-sm md:text-base visible font-mono text-gray-800 italic'>
                     * a lot of blockchains have the ability for people to create their own crypto-currencies. Think of this of adding another worksheet to the Excel file. This worksheet also has it's own unique address through which people can interact with it.
                     </p>  
                 </div>

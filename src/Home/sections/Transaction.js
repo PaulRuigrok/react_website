@@ -35,8 +35,13 @@ const Transaction = () => {
             document.getElementById("pc9").className = 'pc_pic flex justify-center hover:animate-wiggle fill-current text-green-500';
             document.getElementById("file_init").style.display = 'none'
             document.getElementById("file_checked").style.display = 'block'
-            let subtract_amount = 0.01 + parseInt(input)
-            setBalance(balance - subtract_amount)
+            if (input === ""){
+                setBalance(balance - 0.01)
+            } else {
+                let subtract_amount = 0.01 + parseInt(input)
+                setBalance(balance - subtract_amount)
+            }
+            
         }
         // input of the form
         let input = document.getElementById('input_amount').value
@@ -74,18 +79,18 @@ const Transaction = () => {
                     {/* left container holding the text */}
                     <div className='flex flex-col md:p-8 md:w-4/12'>
                         <div className='p-8'>
-                            <p className= 'font-mono text-xl text-gray-800'> You absolute ledg, you have made it pretty far already! We are going to talk about transactions.<br></br><br></br> 
+                            <p className= 'font-mono text-xl text-gray-800'> You absolute ledg, you have made it pretty far already, we're almost there! but first we are going to talk about transactions now.<br></br><br></br> 
                             Ask yourself, what information do we need to send to the blockchain to make a transaction?
                             </p>
                         </div>     
                         <div>
-                            <div className='flex-col p-4'>
+                            <div className='flex-col p-8'>
                             <ClickToReveal num='1' text="the amount you want to send"/>
                             </div>
-                            <div className='flex-col p-4'>
+                            <div className='flex-col p-8'>
                             <ClickToReveal num='2' text="your address / public key"/>
                             </div>
-                            <div className='flex-col p-4'>
+                            <div className='flex-col p-8'>
                             <ClickToReveal num='3' text="the recepient's address / public key"/>
                             </div>
                         </div>
@@ -93,13 +98,13 @@ const Transaction = () => {
                             <p className='font-mono text-xl p-8 text-gray-800'>
                             Let's say you are using the Iconex Wallet Manager and you have 10 ICX in it. If you want to send some ICX to an other address you need to prepare a 'transaction request' in Iconex. for example:
                             </p>
-                            <div className='md:w-9/12 p-2'>
+                            <div className='md:p-8'>
                                 <div className='font-mono bg-white p-4 rounded'> 
                                     <span className='font-mono underline'>
                                     Transfer: <br></br><br></br></span>
                                     Balance: {`${balance} icx`}<br></br><br></br>
                                     Amount: <input type='number' id='input_amount' 
-                                    placeholder='set'
+                                    placeholder={0}
                                     className='font-mono bg-yellow-200 rounded w-12 pl-2'></input><br></br><br></br>
                                     <span className='font-mono text-s'>Fee: 0.01 icx </span><br></br><br></br>
                                     From: <input type='text' readOnly={true} 
@@ -112,6 +117,9 @@ const Transaction = () => {
                                     className='p-2 rounded-md bg-yellow-300 border border-gray-600'></input>
                                 </div>
                             </div>
+                            <p className='font-mono md:text-xl p-8 text-gray-800 italic'>
+                            For every transaction you will have to pay a transaction fee. Please realize that you also pay for using a bank and other payment-services (although it may not always clear that / what you pay them). The transaction fees on blockchains keep it so that there is no third party needed to ensure payments and the safety of the system.
+                            </p>
                         </div>
                     </div>
 
@@ -173,7 +181,7 @@ const Transaction = () => {
                     <span className='font-mono text-base'>* note that even if you send 0 ICX you will still pay a transaction fee. </span>
                 </p>
             </div>
-            <div className='md:w-4/12 w-8/12 md:justify-self-end m-8'>
+            <div className='md:w-3/12 w-8/12 m-8'>
                 <CheckButton message='Perfect, last step!' />
             </div>
         </div>
