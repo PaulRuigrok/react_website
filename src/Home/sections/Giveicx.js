@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
-import { useInView } from 'react-intersection-observer';
 
 const Giveicx = () => {
-    const { ref, inView } = useInView({
-        /* Optional options */
-        threshold: 0.15,
-    });
-    
+
     // Show the checkmark when tweet-text is copied
     const [showCheckmark, setShowCheckmark] = useState(false)
     const show_check_mark = () =>{
@@ -41,7 +36,7 @@ const Giveicx = () => {
     }
     
     return (
-        <div id='geticx' ref={ref} className= {`${inView ? 'fade-in' : 'fade-out'} w-11/12 md:w-5/12 flex flex-col px-4 py-12 md:p-8`}>
+        <div id='geticx'  className= {` w-11/12 md:w-5/12 flex flex-col px-4 py-12 md:p-8`}>
             <h1 className= 'text-4xl md:text-6xl font-display text-gray-800 font-bold text-left'>Real World Practice</h1>
             <p className='font-mono pt-8 md:text-2xl'>
                 You made it! To finish up I want to give you some real world crypto so you can practice using a Wallet Manager. I will send you some free ICX (the native crypto-currency of the ICON Blockchain) if you follow these three steps:

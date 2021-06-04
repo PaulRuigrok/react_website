@@ -117,14 +117,14 @@ const Transaction = () => {
                                     className='p-2 rounded-md bg-yellow-300 border border-gray-600'></input>
                                 </div>
                             </div>
-                            <p className='font-mono md:text-xl p-8 text-gray-800 italic'>
+                            <p className='font-mono md:text-xl p-4 pt-10 text-gray-800 italic'>
                             For every transaction you will have to pay a transaction fee. Please realize that you also pay for using a bank and other payment-services (although it may not always clear that / what you pay them). The transaction fees on blockchains keep it so that there is no third party needed to ensure payments and the safety of the system.
                             </p>
                         </div>
                     </div>
 
                     {/* right part of the container holding the network svg scheme */}
-                    <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4 bottom-0 z-30 md:z-10'>
+                    <div className='md:w-1/2 sticky bg-yellow-300 w-full pt-2 pb-4 bottom-0 z-40 md:z-10'>
                         <div className='flex flex-col sticky md:top-40 '>
                             <p className='text-center font-mono md:text-3xl pb-2 md:pb-8 text-gray-800'>the blockchain:</p>
                             <div className='grid grid-cols-3 gap-6 md:gap-8'>

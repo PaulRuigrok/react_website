@@ -6,6 +6,7 @@ import SideNav from './side_nav'
 import Recap from './sections/Recap'
 import Transaction from './sections/Transaction'
 import Giveicx from './sections/Giveicx'
+import NavButton from '../Components/NavButton'
 
 const Home = () => {
     useEffect(() =>{
@@ -32,6 +33,7 @@ const Home = () => {
             <Recap/>
             <Transaction/>
             <Giveicx/>
+            <NavButton/>
         </div>
         </>
     )

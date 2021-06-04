@@ -48,7 +48,7 @@ function App() {
         <Route path='/discord' component={Discord}/>
         <Route path='/contact' component={Contact} />
       </Switch>
-      <Footer mobileNavIsOpen={mobileNavIsOpen} toggleMobileNav={toggle_mobile_nav} />
+      {/* <Footer mobileNavIsOpen={mobileNavIsOpen} toggleMobileNav={toggle_mobile_nav} /> */}
       
     </>
   );
