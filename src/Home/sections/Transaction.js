@@ -79,7 +79,7 @@ const Transaction = () => {
                     {/* left container holding the text */}
                     <div className='flex flex-col md:p-8 md:w-4/12'>
                         <div className='p-8'>
-                            <p className= 'font-mono text-xl text-gray-800'> You absolute ledg, you have made it pretty far already, we're almost there! but first we are going to talk about transactions now.<br></br><br></br> 
+                            <p className= 'font-mono text-xl text-gray-800'> You absolute ledg, you have made it pretty far already, we're almost there! But first, we are going to talk about transactions now.<br></br><br></br> 
                             Ask yourself, what information do we need to send to the blockchain to make a transaction?
                             </p>
                         </div>     
@@ -96,7 +96,7 @@ const Transaction = () => {
                         </div>
                         <div>
                             <p className='font-mono text-xl p-8 text-gray-800'>
-                            Let's say you are using the Iconex Wallet Manager and you have 10 ICX in it. If you want to send some ICX to an other address you need to prepare a 'transaction request' in Iconex. for example:
+                            Let's say you are using the ICONex Wallet Manager and you have 10 ICX in it. If you want to send some ICX to another address, you need to prepare a 'transaction request' in ICONex. for example:
                             </p>
                             <div className='md:p-8'>
                                 <div className='font-mono bg-white p-4 rounded'> 
@@ -118,7 +118,7 @@ const Transaction = () => {
                                 </div>
                             </div>
                             <p className='font-mono md:text-xl p-4 pt-10 text-gray-800 italic'>
-                            For every transaction you will have to pay a transaction fee. Please realize that you also pay for using a bank and other payment-services (although it may not always clear that / what you pay them). The transaction fees on blockchains keep it so that there is no third party needed to ensure payments and the safety of the system.
+                            For every transaction, you will have to pay a transaction fee. Please realize that you’re already paying for using a bank and other payment-services (although it may not always be clear what you are paying them). The transaction fees on blockchains maintain the safety of the system and ensure that there is no third party (for example a bank or creditcard company) needed to process payments.
                             </p>
                         </div>
                     </div>
@@ -174,10 +174,10 @@ const Transaction = () => {
         <div className='flex flex-col items-center py-20'>
             <div className='md:w-8/12 flex flex-col md:w-8/12 justify-center p-8 '>
                 <p className= 'font-mono text-xl md:text-2xl text-gray-800 p-4 pl-2 md:m-8'>
-                    So the transaction-request is submitted to one of the computer that is connected to the blockchain and if everything checks out the "Excel sheet" is changed. Try and send more than your balance, your transaction will be rejected.<br></br><br></br>
-                    Let's say you have hacked the computer you are sending the transaction-request to, and you fool it into approving you sending more tokens than you have.<br></br><br></br>
+                    So the transaction-request is submitted to one of the computers that is connected to the blockchain, and if everything checks out the "Excel sheet" is changed. Try and send more than your balance, your transaction will be rejected.<br></br><br></br>
+                    Let's say you have hacked the computer that you are sending this transaction-request to, so that it is fooled into approving the transfer of more tokens than you actually have.<br></br><br></br>
                     In that case the next computer that has to approve the transaction-request your submitting will see that something is wrong and your request will be denied. <br></br><br></br>
-                    So if you want to 'fool' the network (and send more ICX than you have, for example) you will have to hack every computer that is connected to the network, and if the network is big enough this is practicly impossible.<br></br><br></br>
+                    So if you want to 'fool' the network (and send more ICX than you have, for example) you will have to hack every computer in the world that is connected to the network. Considering networks are already massive and continuing to grow, this practically impossible.<br></br><br></br>
                     <span className='font-mono text-base'>* note that even if you send 0 ICX you will still pay a transaction fee. </span>
                 </p>
             </div>

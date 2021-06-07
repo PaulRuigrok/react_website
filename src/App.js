@@ -7,6 +7,7 @@ import About from './About'
 import Contact from './Contact'
 import Discord from './Discord'
 import Footer from './shared/Footer'
+import Rabbithole from './Rabbithole'
 import './App.css';
 
 
@@ -16,11 +17,7 @@ function App() {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-  const [mobileNavIsOpen, setMobileNavIsOpen] = useState(false)
-  const toggle_mobile_nav = () => {
-    setMobileNavIsOpen(!mobileNavIsOpen)
-  }
-  
+
   // HIDE MENU WHEN SCREEN IS RESIZED
   useEffect(() => {
     
@@ -47,8 +44,9 @@ function App() {
         <Route path='/about' component={About} />
         <Route path='/discord' component={Discord}/>
         <Route path='/contact' component={Contact} />
+        <Route path='/rabbithole' component={Rabbithole} />
       </Switch>
-      {/* <Footer mobileNavIsOpen={mobileNavIsOpen} toggleMobileNav={toggle_mobile_nav} /> */}
+      <Footer />
       
     </>
   );

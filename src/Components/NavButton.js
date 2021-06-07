@@ -8,7 +8,7 @@ const NavButton = () => {
     }
     
     return (
-        <div className = 'z-10 px-10 md:px-0 flex h-12 md:h-20 items-center justify-center fixed overflow-hidden left-2 bottom-6'>
+        <div className = 'z-10 px-10 md:px-0 flex h-12 md:h-20 items-center justify-center fixed overflow-hidden left-0 bottom-6'>
             <div className = 'w-screen flex justify-between px-0 md:px-40 '>
                 <div className = {`${!mobileNavIsOpen ? 'mobile-nav-menu-closed' : 'mobile-nav-menu-open'} cursor-pointer md:hidden flex items-center flex justify-center items-center`}
                     onClick={toggle_mobile_nav}>  
@@ -39,7 +39,7 @@ const NavButton = () => {
                         <p className='font-mono tracking-widest'>* transactions</p>
                     </Link>
                     <Link onClick={toggle_mobile_nav} to='geticx' spy={true} smooth={true} className="cursor-pointer pl-4 py-4 ">
-                        <p className='font-mono tracking-widest'>* practice</p>
+                        <p className='font-mono tracking-widest'>* free money :)</p>
                     </Link>
                 </div>
             </div>

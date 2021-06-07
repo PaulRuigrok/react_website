@@ -33,7 +33,7 @@ const Navbar = ({isOpen, toggle}) => {
                     <div id='logo' className={`md:logo-post logo ${isOpen && 'logo-post'}`}>
                     <LogoSvg id="logo_nav" className='w-8 md:w-14 animate-spin'/>
                     </div>
-                    <h2 className= 'text-2xl hidden md:text-4xl md:flex ml-10 font-display font-bold'>how_to_crypto.com</h2>
+                    <h2 className= 'text-2xl hidden md:text-4xl md:flex ml-10 font-display font-bold'>cryptobeginner.info</h2>
                 </Link>
                 <div className = {`${!isOpen ? 'menubutton' : 'menubutton-open'} cursor-pointer md:hidden flex items-center flex justify-center items-center`}
                     onClick={toggle}>
@@ -46,6 +46,7 @@ const Navbar = ({isOpen, toggle}) => {
                     <Link to="/" className = 'p-6 h-full flex items-center font-mono tracking-widest hover:underline'>Home</Link>
                     <Link to="/about" className = 'p-6 h-full flex items-center font-mono tracking-widest hover:underline'>About</Link>
                     <Link to="/discord" className = 'p-6 h-full flex items-center font-mono tracking-widest hover:underline'>Discord</Link>
+                    <Link to="/rabbithole" className = 'p-6 h-full flex items-center font-mono tracking-widest hover:underline'>Rabbithole</Link>
                     <Link to="/contact" className = 'p-6 h-full flex items-center font-mono tracking-widest hover:underline'>Contact</Link>
                 </nav>
             </div>

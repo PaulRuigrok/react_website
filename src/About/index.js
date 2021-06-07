@@ -20,9 +20,10 @@ const About = () => {
                 </p>
                 <h1 className= 'p10 text-4xl font-display text-gray-800 font-bold text-left mb-8'>about this website:</h1>
                 <p className='font-mono md:text-2xl mb-8'>
-                    I created this website to provide crypto-newbies a place to start exploring and hopefully realizing the opportunity that comes with this technology to take back individual sovereignty by owning your own money. And not give it to, and trust, some guy in a suit.<br></br>
+                    I created this website to provide crypto-newbies a place to start exploring and hopefully realizing the opportunity that comes with this technology. That is, the opportunity to take back individual sovereignty by owning your own money. And not give it to, and trust, some guy in a suit.<br></br>
                     Besides introducing people to using crypto-currencies I want this website to become a place for other crypto related topics as well.<br></br><br></br>
-                    If you see things that aren't correct or you have questions, feel free to contact me via Twitter or check out our Discord channel.
+                    I don't consider myself to be an expert at all, I'm learning as I go so
+                    if you see things that aren't correct or you have questions, feel free to contact me via Twitter or check out our Discord channel.
                 </p>
             </div>
         </div>
