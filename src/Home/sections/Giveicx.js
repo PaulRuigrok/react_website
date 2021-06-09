@@ -60,7 +60,7 @@ const Giveicx = () => {
                             <div className='relative'>  
                             <p className='tweet font-mono italic bg-gray-100 border md:text-2xl border p-4 pr-8'>
                             
-                            @paul__rouge I Just completed the beginners-tutorial on crypto at www.cryptobeginners.info & I have earned some free $ICX to practice 😃 <br></br><br></br>check the website if you want to learn the basics of #crypto ! 
+                            @paul__rouge I Just completed the beginners-tutorial on crypto at www.cryptobeginner.info & I have earned some free $ICX to practice 😃 <br></br><br></br>check the website if you want to learn the basics of #crypto ! 
                             <br></br><br></br>
                             #bitcoin #ethereum 
                             <br></br><br></br>
