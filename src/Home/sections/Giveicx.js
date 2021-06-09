@@ -62,7 +62,7 @@ const Giveicx = () => {
                             
                             @paul__rouge I Just completed the beginners-tutorial on crypto at www.cryptobeginners.info & I have earned some free $ICX to practice 😃 <br></br><br></br>check the website if you want to learn the basics of #crypto ! 
                             <br></br><br></br>
-                            #bitcoin #ethereum
+                            #bitcoin #ethereum 
                             <br></br><br></br>
                             My ICX address = {addressInput}</p>
 
