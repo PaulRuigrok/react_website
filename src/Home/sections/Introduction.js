@@ -23,7 +23,7 @@ const Introduction = () => {
                     I think every responsible person should want to be the keeper of his/her own earnings. <br></br><br></br>
                     So crypto's are much more than just some get rich quick thing, even tho that's the narrative that is being pushed the most by media and that is understandable; Because fear and 'fear of missing out', FOMO, generate clicks / money. And media companies need money to continue existing. 
                     <br></br><br></br>
-                    I made this website because I want to show the practical basics of crypto to as much people as possible. I’ll even give you some free money at the end ;) I tought myself, without any programming background, so I'm sure you can too. Let’s take it step by step.<br></br><br></br>
+                    I made this website because I want to show the practical basics of crypto to as much people as possible. I’ll even give you some free money at the end ;) I taught myself, without any programming background, so I'm sure you can too. Let’s take it step by step.<br></br><br></br>
                     We'll be using the 'got it?' button to help you taking it step by step and taking a breather after every step.<br></br><br></br>
                     Paul
                     </p>
