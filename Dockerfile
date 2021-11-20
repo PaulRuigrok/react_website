@@ -22,4 +22,5 @@ CMD ["nginx", "-g", "daemon off;"]
 # docker build -t paulruigrok/react_website:latest .
 ## the dot in the end specifies to find to dockerfile in the current directory
 
+# port 8080 free? not sure...
 # docker run -p 8080:443 paulruigrok/react_website:latest
